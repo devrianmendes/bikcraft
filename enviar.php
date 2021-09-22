@@ -8,8 +8,8 @@ $site_name = ''; // Nome do Site
 $site_url = ''; // URL do Site
 
 //Verificar na internet o smtp e porta utilizada pelo seu provedor de e-mail
-$host_smtp = 'smtp.office365.com' // 'smtp.gmail.com'; // HOST SMTP Ex: smtp.domain.com.br
-$host_port = '587' // '465'; // Porta do Host
+$host_smtp = 'smtp.office365.com'; // 'smtp.gmail.com'; // HOST SMTP Ex: smtp.domain.com.br
+$host_port = '587'; // '465'; // Porta do Host
 
 // Variáveis do Formulário
 // Caso o formulario tenha mais algum campo, basta adicionar lá, aqui e no conteúdo do formulário logo abaixo
