@@ -1,0 +1,2584 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+:root {
+    --amarelo: #FEC63E;
+    --fonte-texto: normal 1.4rem/2.0rem 'Merriweather', serif;
+    --fonte-titulo: bold 2.4rem/2.4rem Arial, sans-serif;
+    --fonte-titulo-pequeno: bold 1.8rem/1.8rem Arial, sans-serif;
+}
+
+:root {
+    font-size: 10px;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* Com a fonte nessas configurações, cada rem equivalerá a 10px */
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+
+.flex-row, .flex-column, .flex-between, .flex-evenly, .flex-around {
+    align-items: center;
+}
+
+/* FLEXXXX */
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.grid-1 {
+    width: 40px;
+}
+
+.grid-2 {
+    width: 100px;
+}
+
+.grid-3 {
+    width: 160px;
+}
+
+.grid-4 {
+    width: 220px;
+}
+
+.grid-5 {
+    width: 280px;
+}
+
+.grid-6 {
+    width: 340px;
+}
+
+.grid-7 {
+    width: 400px;
+}
+
+.grid-8 {
+    width: 460px;
+}
+
+.grid-9 {
+    width: 520px;
+}
+
+.grid-10 {
+    width: 580px;
+}
+
+.grid-11 {
+    width: 640px;
+}
+
+.grid-12 {
+    width: 700px;
+}
+
+.grid-13 {
+    width: 760px;
+}
+
+.grid-14 {
+    width: 820px;
+}
+
+.grid-15 {
+    width: 880px;
+}
+
+.grid-16 {
+    width: 940px;
+}
+
+.grid-1-3 {
+    width: 300px;
+}
+
+/* ############################################# PÁGINA INDEX.HTML ############################################# */
+
+html {
+    font: var(--fonte-texto);
+}
+
+/* INÍCIO MENU HAMBURGUER */
+
+.hamburguer {
+    width: 30px;
+    height: 20px;
+    display: none;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    z-index: 11;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.hamburguer-linhas {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transition: .3s;
+}
+
+/* FINAL MENU HAMBURGUER */
+
+/* JANELA DO MENU HAMBURGUER ABERTA*/
+
+.sidebar {
+    background-color: #000;
+    position: fixed;
+    top: 0px;
+    right: -320px;
+    height: 100%;
+    width: 320px;
+    transition: .5s;
+    z-index: 10;
+}
+
+.show-menu .sidebar {
+    background-color: #000;
+    position: fixed;
+    right: 0px;
+    z-index: 10;
+    height: 100%;
+    width: 320px;
+    transition: .5s;
+}
+
+.show-menu .sidebar-navbar, .sidebar-navbar {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -65%);
+    text-align: center;
+}
+
+.show-menu .sidebar-item, .sidebar-item {
+    margin: 3rem 0rem;
+}
+
+.show-menu .sidebar-item a, .sidebar-item a {
+    font: var(--fonte-titulo);
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    color: var(--amarelo);
+    padding: 2rem;
+}
+
+.show-menu .hamburguer {
+    position: fixed;
+    right: 260px;
+    transition: .5s;
+}
+
+.show-menu .hamburguer>#linha1 {
+    transform: rotate(45deg) translate(9px, 7px);
+    transition: .3s;
+    background-color: var(--amarelo);
+}
+
+.show-menu .hamburguer>#linha2 {
+    opacity: 0;
+    transition: .2s;
+}
+
+.show-menu .hamburguer>#linha3 {
+    transform: rotate(-45deg) translate(5px, -3px);
+    transition: .3s;
+    background-color: var(--amarelo);
+}
+
+.sidebar-social-media {
+    position: absolute;
+    bottom: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.sidebar-item a:hover {
+    border-width: 0rem 0rem .2rem 0rem;
+    border-style: solid;
+    border-color: var(--amarelo);
+}
+
+/* JANELA DO MENU HAMBURGUER ABERTA*/
+
+/* INÍCIO CABEÇALHO */
+
+.cabecalho {
+    background-color: var(--amarelo);
+    padding: 8px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    font: bold .8rem Arial;
+    z-index: 10;
+}
+
+.cabecalho-menu {
+    display: flex;
+}
+
+.cabecalho-menu-item {
+    margin-left: .5rem;
+}
+
+.cabecalho-menu a {
+    padding: 1.5rem 1rem;
+}
+
+.cabecalho-menu a:hover {
+    border-width: 0rem 0rem .2rem 0rem;
+    border-style: solid;
+    border-color: #000;
+}
+
+.logo-wrapper {
+    width: 100px;
+    height: 62px;
+}
+
+/* CABEÇALHO */
+
+/* INTRO HOME */
+
+.intro {
+    margin-top: 78px;
+    width: 100vw;
+    height: 380px;
+    background: url("../img/bg.jpg") no-repeat center;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    color: #FFF;
+}
+
+.intro-h1 {
+    font: bold 4.8rem Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.separador {
+    width: 10rem;
+    height: .2rem;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+#william {
+    text-transform: uppercase;
+    font: bold 2rem Arial, sans-serif;
+    letter-spacing: .1rem;
+}
+
+.intro-h1, .intro-info .separador, #intro-texto {
+    margin-bottom: .8rem;
+}
+
+.btn {
+    font: bold 1.5rem Arial, sans-serif;
+    width: 15rem;
+    height: 4rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000;
+    background-color: var(--amarelo);
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.btn-preto {
+    font: bold 1.5rem Arial, sans-serif;
+    color: var(--amarelo);
+    width: 15rem;
+    height: 4rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--amarelo);
+    background-color: #000;
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
+
+.btn-preto:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.texto-btn {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    font: var(--fonte-texto);
+    font-weight: bold;
+}
+
+/* INTRO HOME */
+
+/* TITULO */
+
+.titulo {
+    font: var(--fonte-titulo);
+    margin-top: 4rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.separador-preto {
+    background-color: #000;
+    margin-bottom: 2rem;
+}
+
+/* TITULO */
+
+/*PRODUTOS */
+
+.produtos-tipos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.produto-icone {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto {
+    width: 300px;
+}
+
+.produto img {
+    padding: .5rem 0rem;
+}
+
+.produto-descricao {
+    background-color: var(--amarelo);
+    padding: 1.5rem;
+    font: var(--fonte-texto);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* GRID DE PRODUTOS */
+
+/* PORTFÓLIO */
+
+.portfolio {
+    background-color: #000;
+    color: var(--amarelo);
+}
+
+.portfolio .separador {
+    background-color: var(--amarelo);
+    margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.portfolio-grid-item:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.portfolio-grid-item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.portfolio-grid-item:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+/* PORTFÓLIO */
+
+/* SOBRE */
+
+.linhas-sobre {
+    position: relative;
+    top: -5.9rem;
+    right: -.1rem;
+}
+
+.qualidades {
+    text-align: center;
+    position: relative;
+    top: -5.9rem;
+    min-width: 940px;
+}
+
+.qualidades p {
+    font: normal 1.4rem/2.0rem 'Merriweather', serif;
+}
+
+.sobre .texto-btn, .sobre .btn {
+    position: relative;
+    top: -5.9rem;
+}
+
+.sobre .btn {
+    margin-bottom: 0rem;
+}
+
+.titulo-pequeno {
+    font: var(--fonte-titulo-pequeno);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+/* SOBRE */
+
+/* QUEBRA */
+
+.quebra {
+    background: url("../img/bg-footer.jpg") no-repeat center;
+    background-size: 100%;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+    font: var(--fonte-texto);
+    color: white;
+}
+
+.quebra cite {
+    font: var(--fonte-titulo-pequeno);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.quebra .separador, .sobre-texto .separador {
+    margin: .5rem 0;
+}
+
+/* QUEBRA */
+
+/* RODAPE */
+
+.rodape {
+    padding: 3rem;
+    background-color: #000;
+    color: #FFF;
+}
+
+.rodape .separador {
+    margin: .5rem 0;
+}
+
+.rodape .flex-row, .rodape .flex-between {
+    align-items: flex-start;
+}
+
+.rodape .titulo {
+    margin-top: 0;
+}
+
+.rodape p {
+    font: var(--fonte-texto);
+}
+
+.rodape-item {
+    align-items: flex-start;
+    width: 30%;
+}
+
+/* RODAPE */
+
+/* COPYRIGHT */
+
+.copy {
+    background-color: var(--amarelo);
+    font: var(--fonte-texto);
+    font-weight: bold;
+    padding: 2rem;
+}
+
+/* COPYRIGHT */
+
+/* ############################################# PÁGINA INDEX.HTML ############################################# */
+
+/* ############################################# PÁGINA PRODUTOS.HTML ############################################# */
+
+/* ORCAMENTO */
+
+.orcamento .flex-row {
+    align-items: unset;
+}
+
+.orcamento {
+    background-color: #000000;
+    color: #FFF;
+    text-align: center;
+    padding: 4rem 0rem 0rem 0rem;
+}
+
+.orcamento .titulo {
+    color: var(--amarelo);
+    margin-top: 0rem;
+}
+
+.orcamento .separador {
+    background-color: var(--amarelo);
+}
+
+/* FORMULARIO */
+
+.form {
+    width: 100%;
+    padding: 2rem 2rem 2rem 0rem;
+    font: var(--fonte-texto);
+}
+
+.form .flex-column {
+    align-items: flex-start;
+}
+
+.form input, textarea {
+    margin-bottom: 1rem;
+    min-width: 100%;
+    height: 3rem;
+    padding: .5rem;
+    border-width: .3rem;
+    border-style: solid;
+    border-color: var(--amarelo);
+    background-color: #000000;
+    color: var(--amarelo);
+    resize: vertical;
+    font: var(--fonte-texto);
+}
+
+.form textarea {
+    min-height: 100px;
+}
+
+.orcamento .btn-preto {
+    margin-bottom: 0;
+}
+
+.formphp label.nao-aparece, .formphp input.nao-aparece {
+    display: none !important;
+}
+
+#form-erro span, #form-send span {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#form-send {
+    color: #31aa39;
+}
+
+#form-erro {
+    color: #f64540;
+}
+
+/* FORMULARIO */
+
+/* DADOS */
+
+.dados {
+    min-width: 50%;
+    text-align: left;
+    padding: 4rem 0 0 2rem;
+    font: var(--fonte-texto);
+    margin-bottom: 8rem;
+}
+
+.dados-contato h3 {
+    color: var(--amarelo);
+    font: var(--fonte-titulo);
+    width: 100%;
+}
+
+.dados-contato p:nth-child(7), .dados-contato p:nth-child(9), .dados-contato p:nth-child(11) {
+    background-color: #222;
+}
+
+/* DADOS */
+
+/* INTRODUÇÃO DA PÁGINA PRODUTOS */
+
+.produtos-intro {
+    height: 160px;
+    background: url("../img/bg-produtos.jpg") no-repeat center;
+    justify-content: center;
+    background-size: auto;
+}
+
+/* INTRODUÇÃO DA PÁGINA PRODUTOS */
+
+/* TÍTULOS DOS PRODUTOS */
+
+.grid-titulo {
+    margin: auto;
+    color: #FFF;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.grid-titulo .titulo {
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+/* TÍTULOS DOS PRODUTOS */
+
+/* GRID PRODUTOS*/
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 1rem;
+    font-weight: bold;
+    padding: 4rem 0rem;
+}
+
+/* GRID 1 */
+
+.grid-produtos-item:nth-child(1) {
+    grid-column: 1 / 13;
+    grid-row: 1 / 9;
+    background: url("../img/bikcraft-passeio-1.jpg") no-repeat center;
+    background-size: 100%;
+    text-align: center;
+}
+
+.grid-produtos-item:nth-child(2) {
+    grid-column: 13 / 17;
+    grid-row: 1 / 9;
+    background: url("../img/passeio.png") no-repeat center;
+    background-size: 100%;
+    background-color: #000;
+    object-fit: cover;
+}
+
+.grid-produtos-item:nth-child(3) {
+    grid-column: 1 / 9;
+    grid-row: 9 / 17;
+    background: url("../img/bikcraft-passeio-2.jpg") no-repeat center;
+    height: 280px;
+}
+
+.grid-produtos-item:nth-child(4) {
+    grid-column: 9 / 17;
+    grid-row: 9 / 17;
+    height: 100%;
+}
+
+/* GRID 1 */
+
+/* GRID 2 */
+
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(1) {
+    background: url("../img/bikcraft-esporte-1.jpg") no-repeat center;
+    background-size: 100%;
+}
+
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(2) {
+    background: url("../img/esporte.png") no-repeat center;
+    background-color: #000;
+}
+
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(3) {
+    background: url("../img/bikcraft-esporte-2.jpg") no-repeat center;
+}
+
+/* GRID 2 */
+
+/* GRID 3 */
+
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(1) {
+    background: url("../img/bikcraft-retro-1.jpg") no-repeat center;
+    background-size: 100%;
+}
+
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(2) {
+    background: url("../img/retro.png") no-repeat center;
+    background-color: #000;
+}
+
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(3) {
+    background: url("../img/bikcraft-retro-2.jpg") no-repeat center;
+}
+
+/* GRID 3 */
+
+.grid-texto {
+    padding: 4rem;
+    background-color: #000;
+    color: #FFF;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--amarelo);
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.grid-table div {
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+}
+
+.grid-table div:nth-child(1), .grid-table div:nth-child(3) {
+    border-left: none;
+}
+
+.grid-table div:nth-child(2) {
+    border-right: none;
+}
+
+.grid-table div:nth-child(3), .grid-table div:nth-child(4) {
+    border-bottom: none;
+}
+
+.grid-table div:nth-child(4) {
+    border-right: none;
+}
+
+.grid-table p {
+    padding: .9rem;
+}
+
+/* GRID PRODUTOS*/
+
+/* ############################################# PÁGINA PRODUTOS.HTML ############################################# */
+
+/* ############################################# PÁGINA PORTFOLIO.HTML ############################################# */
+
+.portfolio-intro {
+    height: 160px;
+    background: url("../img/bg-portfolio.jpg") no-repeat center;
+    justify-content: center;
+    background-size: auto;
+}
+
+.portfolio-portfolio {
+    background-color: #fff;
+}
+
+.portfolio-itens {
+    background-color: #000;
+    padding: 4rem;
+}
+
+.portfolio-texto {
+    width: 40%;
+    margin: 8rem auto;
+}
+
+.portfolio-texto p {
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    font-style: italic;
+}
+
+cite {
+    font: bold 1.6rem/2.0rem Arial, sans-serif;
+    text-align: right;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ############################################# PÁGINA PORTFOLIO.HTML ############################################# */
+
+/* ############################################# PÁGINA SOBRE.HTML ############################################# */
+
+.sobre-intro {
+    height: 160px;
+    background: url("../img/bg-sobre.jpg") no-repeat center;
+    justify-content: center;
+    background-size: auto;
+}
+
+.sobre-texto {
+    font-weight: bold;
+    width: 100%;
+}
+
+.sobre-texto-esquerda {
+    width: 55%;
+    margin: 0rem 2rem 4rem 0rem;
+}
+
+.sobre-texto-direita {
+    margin: 0rem 3rem 4rem 0rem;
+    align-self: flex-start;
+}
+
+/* ############################################# PÁGINA SOBRE.HTML ############################################# */
+
+/* ############################################# PÁGINA CONTATO.HTML ############################################# */
+
+.contato-intro {
+    height: 160px;
+    background: url("../img/bg-contato.jpg") no-repeat center;
+    justify-content: center;
+    background-size: auto;
+}
+
+.main-contato .dados, .main-contato .form {
+    font-weight: bold;
+}
+
+.dados .dados-contato {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.dados .rodape-item {
+    margin-top: 9rem;
+    width: 100%;
+}
+
+.dados .social-medias {
+    width: 50%;
+}
+
+.dados .separador {
+    margin: .5rem 0;
+}
+
+.main-contato .orcamento {
+    background-color: #FFF;
+    color: #000000;
+}
+
+.main-contato input, .main-contato textarea {
+    background-color: unset;
+    color: #000;
+}
+
+.main-contato .btn {
+    margin-bottom: 0px;
+}
+
+.mapa-wrapper img {
+    width: 100%;
+    height: auto;
+    margin: 5rem 0rem;
+}
+
+/* MEDIA QUERIES */
+
+/* ############################################# PÁGINA CONTATO.HTML ############################################# */
+
+@media only screen and (max-width: 380px) {
+    .main-contato textarea {
+        max-width: 216px;
+    }
+}
+
+/*Mobile devices (480px and down)*/
+
+@media only screen and (max-width: 480px) {
+    .portfolio-grid {
+        width: 300px !important;
+    }
+    .portfolio-grid-item img {
+        width: 300px;
+    }
+    .portfolio-grid-item:last-child img {
+        width: 300px !important;
+    }
+    .rodape .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .rodape-item {
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+    .rodape .separador {
+        margin: .5rem auto;
+    }
+    .centralizador {
+        display: none;
+    }
+    .social-medias {
+        justify-content: space-evenly;
+    }
+    .quebra>p {
+        font-size: 1.2rem;
+    }
+}
+
+/*Ipads and tablets (min 481px - max 768px)*/
+
+@media only screen and (max-width: 768px) {
+    /* @@@@@@@@@@ MENU @@@@@@@@@@ */
+    .cabecalho-menu {
+        display: none;
+    }
+    .hamburguer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    /* @@@@@@@@@@ MENU @@@@@@@@@@ */
+    /* @@@@@@@@@@ INTRO @@@@@@@@@@ */
+    .intro-info {
+        transform: scale(.8);
+    }
+    .index-intro {
+        background: url("../img/bg-mobile.jpg") no-repeat center;
+    }
+    /* @@@@@@@@@@ INTRO @@@@@@@@@@ */
+    /* @@@@@@@@@@ PRODUTOS @@@@@@@@@@ */
+    .produtos-tipos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .produto {
+        margin-bottom: 2rem;
+        width: 80%;
+    }
+    .container {
+        width: 80%;
+    }
+    /* @@@@@@@@@@ PRODUTOS @@@@@@@@@@ */
+    /* @@@@@@@@@@ SOBRE @@@@@@@@@@ */
+    .linhas-sobre img {
+        display: none;
+    }
+    .qualidades {
+        flex-direction: column;
+        min-width: auto;
+    }
+    .linha-vertical {
+        width: .3rem;
+        height: 6rem;
+        background-color: #000;
+    }
+    .linha-vertical:nth-child(1) {
+        height: 3rem;
+        margin-top: 2rem;
+    }
+    .qualidade-item {
+        border-width: .4rem;
+        border-style: solid;
+        padding: 2rem;
+        width: 90%;
+    }
+    .sobre .texto-btn {
+        margin-top: 0;
+    }
+    /* @@@@@@@@@@ SOBRE @@@@@@@@@@ */
+    .quebra {
+        background-size: auto;
+    }
+    /* @@@@@@@@@@ RODAPÉ @@@@@@@@@@ */
+    .rodape-item {
+        width: 45%;
+    }
+    .rodape-item:nth-child(1) {
+        display: none;
+    }
+    /* @@@@@@@@@@ RODAPÉ @@@@@@@@@@ */
+    /* ############################################# FINAL DA PÁGINA INDEX.HTML ############################################# */
+    /* ############################################# INICIO DA PÁGINA PRODUTOS.HTML ############################################# */
+    .info-orcamento {
+        flex-direction: column;
+    }
+    /* ############################################# FIM DA PÁGINA PRODUTOS.HTML ############################################# */
+    /* ############################################# INICIO DA PÁGINA PORTFOLIO.HTML ############################################# */
+    .portfolio-texto {
+        width: 80% !important;
+    }
+    /* ############################################# FIM DA PÁGINA PORTFOLIO.HTML ############################################# */
+    /* ############################################# INÍCIO DA PÁGINA SOBRE.HTML ############################################# */
+    .sobre-texto {
+        flex-direction: column;
+    }
+    .sobre-texto-esquerda {
+        width: 100%;
+    }
+    /* ############################################# FIM DA PÁGINA SOBRE.HTML ############################################# */
+    /* ############################################# FIM DA PÁGINA SOBRE.HTML ############################################# */
+    .main-contato .rodape-item {
+        margin: 4rem 0rem 4rem 0rem;
+    }
+    /* ############################################# FIM DA PÁGINA SOBRE.HTML ############################################# */
+}
+
+@media only screen and (max-width: 860px) {
+    .grid-produtos-item:nth-child(1), .grid-produtos:nth-child(2) .grid-produtos-item:nth-child(1), .grid-produtos:nth-child(3) .grid-produtos-item:nth-child(1) {
+        background-size: auto !important;
+    }
+    .sobre-texto {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/*Small screens and laptops (min 769px - max 1024px)*/
+
+@media only screen and (max-width: 1024px) {
+    /* @@@@@@@@@@ PORTFOLIO @@@@@@@@@@ */
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 460px;
+    }
+    .portfolio-grid-item:nth-child(3) img {
+        width: 460px;
+    }
+    /* @@@@@@@@@@ PORTFOLIO @@@@@@@@@@ */
+    /* @@@@@@@@@@ SOBRE @@@@@@@@@@ */
+    .sobre img, .qualidades {
+        transform: scale(.8);
+    }
+    /* @@@@@@@@@@ SOBRE @@@@@@@@@@ */
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIM DA PÁGINA INDEX.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INICIO DA PÁGINA PRODUTOS.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    /* @@@@@@@@@@ PRODUTOS-GRID @@@@@@@@@@ */
+    .grid-produtos {
+        width: 85%;
+    }
+    .grid-produtos-item:nth-child(1), .grid-produtos:nth-child(2) .grid-produtos-item:nth-child(1), .grid-produtos:nth-child(3) .grid-produtos-item:nth-child(1) {
+        height: 280px;
+        background-size: 100%;
+        background-position: right;
+    }
+    .grid-produtos-item:nth-child(2), .grid-produtos-item:nth-child(3) {
+        display: none;
+    }
+    .grid-produtos {
+        display: flex;
+        flex-direction: column;
+    }
+    /* @@@@@@@@@@ PRODUTOS-GRID @@@@@@@@@@ */
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIANL DA PÁGINA PRODUTOS.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INICIO DA PÁGINA PORTFÓLIO.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    .portfolio-texto {
+        width: 60%;
+    }
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIM DA PÁGINA PORTFÓLIO.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INÍCIO DA PÁGINA SOBRE.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    .sobre-equipe {
+        display: flex;
+        justify-content: center;
+    }
+    .sobre-equipe img {
+        max-width: 100%;
+        height: auto;
+    }
+    .sobre-texto {
+        display: flex;
+        flex-direction: column;
+    }
+    .sobre-texto-esquerda {
+        width: 100%;
+        margin-bottom: 0rem;
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIM DA PÁGINA SOBRE.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/*Desktops and large screens (1025px - 1200px) */
+
+@media only screen and (max-width: 1025px) {}
+
+/* Extra-large screens and TVs (1201px and more) */
+
+@media only screen and (min-width: 1201px) {
+    .intro {
+        background-size: auto;
+    }
+}
+
+/* Extra-extra-large screens and TVs (1201px and more) */
+
+@media only screen and (min-width: 1400px) {
+    .intro {
+        background-size: 100%;
+    }
+}
+
+/*JQUERY SLIDE*/
+
+.rslides, .rslides_portfolio {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li, .rslides_portfolio li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child, .rslides_portfolio li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img, .rslides_portfolio img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+.rslides2_tabs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.rslides2_tabs li {
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rslides2_tabs li a {
+    background-color: #222222;
+    color: #222222;
+    border-radius: 7px;
+    height: 14px;
+    width: 14px;
+    text-indent: -2000px;
+}
+
+.rslides_tabs li.rslides_here a, .rslides2_tabs li a:hover {
+    background-color: var(--amarelo);
+    color: var(--amarelo);
+}
+
+/* ANIMAÇÕES */
+
+.js .animar_300, .js .animar_600, .js .animar_900, .js .animar_1200, .js .animar_1500 {
+    opacity: 0;
+}
+
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@media (prefers-reduced-motion:reduce), print {
+    .animate__animated {
+        -webkit-animation-duration: 1ms!important;
+        animation-duration: 1ms!important;
+        -webkit-transition-duration: 1ms!important;
+        transition-duration: 1ms!important;
+        -webkit-animation-iteration-count: 1!important;
+        animation-iteration-count: 1!important
+    }
+    .animate__animated[class*=Out] {
+        opacity: 0
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animate__fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown
+=======
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+:root {
+    --amarelo: #FEC63E;
+    --fonte-texto: normal 1.4rem/2.0rem 'Merriweather', serif;
+    --fonte-titulo: bold 2.4rem/2.4rem Arial, sans-serif;
+    --fonte-titulo-pequeno: bold 1.8rem/1.8rem Arial, sans-serif;
+}
+
+:root {
+    font-size: 10px;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* Com a fonte nessas configurações, cada rem equivalerá a 10px */
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+
+.flex-row, .flex-column, .flex-between, .flex-evenly, .flex-around {
+    align-items: center;
+}
+
+/* FLEXXXX */
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16, .grid-1-3 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.grid-1 {
+    width: 40px;
+}
+
+.grid-2 {
+    width: 100px;
+}
+
+.grid-3 {
+    width: 160px;
+}
+
+.grid-4 {
+    width: 220px;
+}
+
+.grid-5 {
+    width: 280px;
+}
+
+.grid-6 {
+    width: 340px;
+}
+
+.grid-7 {
+    width: 400px;
+}
+
+.grid-8 {
+    width: 460px;
+}
+
+.grid-9 {
+    width: 520px;
+}
+
+.grid-10 {
+    width: 580px;
+}
+
+.grid-11 {
+    width: 640px;
+}
+
+.grid-12 {
+    width: 700px;
+}
+
+.grid-13 {
+    width: 760px;
+}
+
+.grid-14 {
+    width: 820px;
+}
+
+.grid-15 {
+    width: 880px;
+}
+
+.grid-16 {
+    width: 940px;
+}
+
+.grid-1-3 {
+    width: 300px;
+}
+
+/* ############################################# PÁGINA INDEX.HTML ############################################# */
+
+html {
+    font: var(--fonte-texto);
+}
+
+/* INÍCIO MENU HAMBURGUER */
+
+.hamburguer {
+    width: 30px;
+    height: 20px;
+    display: none;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    z-index: 11;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.hamburguer-linhas {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transition: .3s;
+}
+
+/* FINAL MENU HAMBURGUER */
+
+/* JANELA DO MENU HAMBURGUER ABERTA*/
+
+.sidebar {
+    background-color: #000;
+    position: fixed;
+    top: 0px;
+    right: -320px;
+    height: 100%;
+    width: 320px;
+    transition: .5s;
+    z-index: 10;
+}
+
+.show-menu .sidebar {
+    background-color: #000;
+    position: fixed;
+    right: 0px;
+    z-index: 10;
+    height: 100%;
+    width: 320px;
+    transition: .5s;
+}
+
+.show-menu .sidebar-navbar, .sidebar-navbar {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -65%);
+    text-align: center;
+}
+
+.show-menu .sidebar-item, .sidebar-item {
+    margin: 3rem 0rem;
+}
+
+.show-menu .sidebar-item a, .sidebar-item a {
+    font: var(--fonte-titulo);
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    color: var(--amarelo);
+    padding: 2rem;
+}
+
+.show-menu .hamburguer {
+    position: fixed;
+    right: 260px;
+    transition: .5s;
+}
+
+.show-menu .hamburguer>#linha1 {
+    transform: rotate(45deg) translate(9px, 7px);
+    transition: .3s;
+    background-color: var(--amarelo);
+}
+
+.show-menu .hamburguer>#linha2 {
+    opacity: 0;
+    transition: .2s;
+}
+
+.show-menu .hamburguer>#linha3 {
+    transform: rotate(-45deg) translate(5px, -3px);
+    transition: .3s;
+    background-color: var(--amarelo);
+}
+
+.sidebar-social-media {
+    position: absolute;
+    bottom: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.sidebar-item a:hover {
+    border-width: 0rem 0rem .2rem 0rem;
+    border-style: solid;
+    border-color: var(--amarelo);
+}
+
+/* JANELA DO MENU HAMBURGUER ABERTA*/
+
+/* INÍCIO CABEÇALHO */
+
+.cabecalho {
+    background-color: var(--amarelo);
+    padding: 8px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    font: bold .8rem Arial;
+    z-index: 10;
+}
+
+.cabecalho-menu {
+    display: flex;
+}
+
+.cabecalho-menu-item {
+    margin-left: .5rem;
+}
+
+.cabecalho-menu a {
+    padding: 1.5rem 1rem;
+}
+
+.cabecalho-menu a:hover {
+    border-width: 0rem 0rem .2rem 0rem;
+    border-style: solid;
+    border-color: #000;
+}
+
+.logo-wrapper {
+    width: 100px;
+    height: 62px;
+}
+
+/* CABEÇALHO */
+
+/* INTRO HOME */
+
+.intro {
+    margin-top: 78px;
+    width: 100vw;
+    height: 380px;
+    background: url("../img/bg.jpg") no-repeat center;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    color: #FFF;
+}
+
+.intro-h1 {
+    font: bold 4.8rem Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.separador {
+    width: 10rem;
+    height: .2rem;
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+#william {
+    text-transform: uppercase;
+    font: bold 2rem Arial, sans-serif;
+    letter-spacing: .1rem;
+}
+
+.intro-h1, .intro-info .separador, #intro-texto {
+    margin-bottom: .8rem;
+}
+
+.btn {
+    font: bold 1.5rem Arial, sans-serif;
+    width: 15rem;
+    height: 4rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000;
+    background-color: var(--amarelo);
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.btn-preto {
+    font: bold 1.5rem Arial, sans-serif;
+    color: var(--amarelo);
+    width: 15rem;
+    height: 4rem;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--amarelo);
+    background-color: #000;
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+    margin-bottom: 4rem;
+}
+
+.btn-preto:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.texto-btn {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    font: var(--fonte-texto);
+    font-weight: bold;
+}
+
+/* INTRO HOME */
+
+/* TITULO */
+
+.titulo {
+    font: var(--fonte-titulo);
+    margin-top: 4rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.separador-preto {
+    background-color: #000;
+    margin-bottom: 2rem;
+}
+
+/* TITULO */
+
+/*PRODUTOS */
+
+.produtos-tipos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.produto-icone {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto {
+    width: 300px;
+}
+
+.produto img {
+    padding: .5rem 0rem;
+}
+
+.produto-descricao {
+    background-color: var(--amarelo);
+    padding: 1.5rem;
+    font: var(--fonte-texto);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* GRID DE PRODUTOS */
+
+/* PORTFÓLIO */
+
+.portfolio {
+    background-color: #000;
+    color: var(--amarelo);
+}
+
+.portfolio .separador {
+    background-color: var(--amarelo);
+    margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.portfolio-grid-item:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.portfolio-grid-item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.portfolio-grid-item:nth-child(3) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+/* PORTFÓLIO */
+
+/* SOBRE */
+
+.linhas-sobre {
+    position: relative;
+    top: -5.9rem;
+    right: -.1rem;
+}
+
+.qualidades {
+    text-align: center;
+    position: relative;
+    top: -5.9rem;
+    min-width: 940px;
+}
+
+.qualidades p {
+    font: normal 1.4rem/2.0rem 'Merriweather', serif;
+}
+
+.sobre .texto-btn, .sobre .btn {
+    position: relative;
+    top: -5.9rem;
+}
+
+.sobre .btn {
+    margin-bottom: 0rem;
+}
+
+.titulo-pequeno {
+    font: var(--fonte-titulo-pequeno);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+/* SOBRE */
+
+/* QUEBRA */
+
+.quebra {
+    background: url("../img/bg-footer.jpg") no-repeat center;
+    background-size: 100%;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+    font: var(--fonte-texto);
+    color: white;
+}
+
+.quebra cite {
+    font: var(--fonte-titulo-pequeno);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.quebra .separador, .sobre-texto .separador {
+    margin: .5rem 0;
+}
+
+/* QUEBRA */
+
+/* RODAPE */
+
+.rodape {
+    padding: 3rem;
+    background-color: #000;
+    color: #FFF;
+}
+
+.rodape .separador {
+    margin: .5rem 0;
+}
+
+.rodape .flex-row, .rodape .flex-between {
+    align-items: flex-start;
+}
+
+.rodape .titulo {
+    margin-top: 0;
+}
+
+.rodape p {
+    font: var(--fonte-texto);
+}
+
+.rodape-item {
+    align-items: flex-start;
+    width: 30%;
+}
+
+/* RODAPE */
+
+/* COPYRIGHT */
+
+.copy {
+    background-color: var(--amarelo);
+    font: var(--fonte-texto);
+    font-weight: bold;
+    padding: 2rem;
+}
+
+/* COPYRIGHT */
+
+/* ############################################# PÁGINA INDEX.HTML ############################################# */
+
+/* ############################################# PÁGINA PRODUTOS.HTML ############################################# */
+
+/* ORCAMENTO */
+
+.orcamento .flex-row {
+    align-items: unset;
+}
+
+.orcamento {
+    background-color: #000000;
+    color: #FFF;
+    text-align: center;
+    padding: 4rem 0rem 0rem 0rem;
+}
+
+.orcamento .titulo {
+    color: var(--amarelo);
+    margin-top: 0rem;
+}
+
+.orcamento .separador {
+    background-color: var(--amarelo);
+}
+
+/* FORMULARIO */
+
+.form {
+    width: 100%;
+    padding: 2rem 2rem 2rem 0rem;
+    font: var(--fonte-texto);
+}
+
+.form .flex-column {
+    align-items: flex-start;
+}
+
+.form input, textarea {
+    margin-bottom: 1rem;
+    min-width: 100%;
+    height: 3rem;
+    padding: .5rem;
+    border-width: .3rem;
+    border-style: solid;
+    border-color: var(--amarelo);
+    background-color: #000000;
+    color: var(--amarelo);
+    resize: vertical;
+    font: var(--fonte-texto);
+}
+
+.form textarea {
+    min-height: 100px;
+}
+
+.orcamento .btn-preto {
+    margin-bottom: 0;
+}
+
+.formphp label.nao-aparece, .formphp input.nao-aparece {
+    display: none !important;
+}
+
+#form-erro span, #form-send span {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#form-send {
+    color: #31aa39;
+}
+
+#form-erro {
+    color: #f64540;
+}
+
+/* FORMULARIO */
+
+/* DADOS */
+
+.dados {
+    min-width: 50%;
+    text-align: left;
+    padding: 4rem 0 0 2rem;
+    font: var(--fonte-texto);
+    margin-bottom: 8rem;
+}
+
+.dados-contato h3 {
+    color: var(--amarelo);
+    font: var(--fonte-titulo);
+    width: 100%;
+}
+
+.dados-contato p:nth-child(7), .dados-contato p:nth-child(9), .dados-contato p:nth-child(11) {
+    background-color: #222;
+}
+
+/* DADOS */
+
+/* INTRODUÇÃO DA PÁGINA PRODUTOS */
+
+.produtos-intro {
+    height: 160px;
+    background: url("../img/bg-produtos.jpg") no-repeat center;
+    justify-content: center;
+    background-size: auto;
+}
+
+/* INTRODUÇÃO DA PÁGINA PRODUTOS */
+
+/* TÍTULOS DOS PRODUTOS */
+
+.grid-titulo {
+    margin: auto;
+    color: #FFF;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.grid-titulo .titulo {
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+/* TÍTULOS DOS PRODUTOS */
+
+/* GRID PRODUTOS*/
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 1rem;
+    font-weight: bold;
+    padding: 4rem 0rem;
+}
+
+/* GRID 1 */
+
+.grid-produtos-item:nth-child(1) {
+    grid-column: 1 / 13;
+    grid-row: 1 / 9;
+    background: url("../img/bikcraft-passeio-1.jpg") no-repeat center;
+    background-size: 100%;
+    text-align: center;
+}
+
+.grid-produtos-item:nth-child(2) {
+    grid-column: 13 / 17;
+    grid-row: 1 / 9;
+    background: url("../img/passeio.png") no-repeat center;
+    background-size: 100%;
+    background-color: #000;
+    object-fit: cover;
+}
+
+.grid-produtos-item:nth-child(3) {
+    grid-column: 1 / 9;
+    grid-row: 9 / 17;
+    background: url("../img/bikcraft-passeio-2.jpg") no-repeat center;
+    height: 280px;
+}
+
+.grid-produtos-item:nth-child(4) {
+    grid-column: 9 / 17;
+    grid-row: 9 / 17;
+    height: 100%;
+}
+
+/* GRID 1 */
+
+/* GRID 2 */
+
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(1) {
+    background: url("../img/bikcraft-esporte-1.jpg") no-repeat center;
+    background-size: 100%;
+}
+
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(2) {
+    background: url("../img/esporte.png") no-repeat center;
+    background-color: #000;
+}
+
+.grid-produtos:nth-child(2) .grid-produtos-item:nth-child(3) {
+    background: url("../img/bikcraft-esporte-2.jpg") no-repeat center;
+}
+
+/* GRID 2 */
+
+/* GRID 3 */
+
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(1) {
+    background: url("../img/bikcraft-retro-1.jpg") no-repeat center;
+    background-size: 100%;
+}
+
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(2) {
+    background: url("../img/retro.png") no-repeat center;
+    background-color: #000;
+}
+
+.grid-produtos:nth-child(3) .grid-produtos-item:nth-child(3) {
+    background: url("../img/bikcraft-retro-2.jpg") no-repeat center;
+}
+
+/* GRID 3 */
+
+.grid-texto {
+    padding: 4rem;
+    background-color: #000;
+    color: #FFF;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--amarelo);
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.grid-table div {
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+}
+
+.grid-table div:nth-child(1), .grid-table div:nth-child(3) {
+    border-left: none;
+}
+
+.grid-table div:nth-child(2) {
+    border-right: none;
+}
+
+.grid-table div:nth-child(3), .grid-table div:nth-child(4) {
+    border-bottom: none;
+}
+
+.grid-table div:nth-child(4) {
+    border-right: none;
+}
+
+.grid-table p {
+    padding: .9rem;
+}
+
+/* GRID PRODUTOS*/
+
+/* ############################################# PÁGINA PRODUTOS.HTML ############################################# */
+
+/* ############################################# PÁGINA PORTFOLIO.HTML ############################################# */
+
+.portfolio-intro {
+    height: 160px;
+    background: url("../img/bg-portfolio.jpg") no-repeat center;
+    justify-content: center;
+    background-size: auto;
+}
+
+.portfolio-portfolio {
+    background-color: #fff;
+}
+
+.portfolio-itens {
+    background-color: #000;
+    padding: 4rem;
+}
+
+.portfolio-texto {
+    width: 40%;
+    margin: 8rem auto;
+}
+
+.portfolio-texto p {
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    font-style: italic;
+}
+
+cite {
+    font: bold 1.6rem/2.0rem Arial, sans-serif;
+    text-align: right;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ############################################# PÁGINA PORTFOLIO.HTML ############################################# */
+
+/* ############################################# PÁGINA SOBRE.HTML ############################################# */
+
+.sobre-intro {
+    height: 160px;
+    background: url("../img/bg-sobre.jpg") no-repeat center;
+    justify-content: center;
+    background-size: auto;
+}
+
+.sobre-texto {
+    font-weight: bold;
+    width: 100%;
+}
+
+.sobre-texto-esquerda {
+    width: 55%;
+    margin: 0rem 2rem 4rem 0rem;
+}
+
+.sobre-texto-direita {
+    margin: 0rem 3rem 4rem 0rem;
+    align-self: flex-start;
+}
+
+/* ############################################# PÁGINA SOBRE.HTML ############################################# */
+
+/* ############################################# PÁGINA CONTATO.HTML ############################################# */
+
+.contato-intro {
+    height: 160px;
+    background: url("../img/bg-contato.jpg") no-repeat center;
+    justify-content: center;
+    background-size: auto;
+}
+
+.main-contato .dados, .main-contato .form {
+    font-weight: bold;
+}
+
+.dados .dados-contato {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.dados .rodape-item {
+    margin-top: 9rem;
+    width: 100%;
+}
+
+.dados .social-medias {
+    width: 50%;
+}
+
+.dados .separador {
+    margin: .5rem 0;
+}
+
+.main-contato .orcamento {
+    background-color: #FFF;
+    color: #000000;
+}
+
+.main-contato input, .main-contato textarea {
+    background-color: unset;
+    color: #000;
+}
+
+.main-contato .btn {
+    margin-bottom: 0px;
+}
+
+.mapa-wrapper img {
+    width: 100%;
+    height: auto;
+    margin: 5rem 0rem;
+}
+
+/* MEDIA QUERIES */
+
+/* ############################################# PÁGINA CONTATO.HTML ############################################# */
+
+@media only screen and (max-width: 380px) {
+    .main-contato textarea {
+        max-width: 216px;
+    }
+}
+
+/*Mobile devices (480px and down)*/
+
+@media only screen and (max-width: 480px) {
+    .portfolio-grid {
+        width: 300px !important;
+    }
+    .portfolio-grid-item img {
+        width: 300px;
+    }
+    .portfolio-grid-item:last-child img {
+        width: 300px !important;
+    }
+    .rodape .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .rodape-item {
+        width: 100% !important;
+        margin-bottom: 1rem;
+    }
+    .rodape .separador {
+        margin: .5rem auto;
+    }
+    .centralizador {
+        display: none;
+    }
+    .social-medias {
+        justify-content: space-evenly;
+    }
+    .quebra>p {
+        font-size: 1.2rem;
+    }
+}
+
+/*Ipads and tablets (min 481px - max 768px)*/
+
+@media only screen and (max-width: 768px) {
+    /* @@@@@@@@@@ MENU @@@@@@@@@@ */
+    .cabecalho-menu {
+        display: none;
+    }
+    .hamburguer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    /* @@@@@@@@@@ MENU @@@@@@@@@@ */
+    /* @@@@@@@@@@ INTRO @@@@@@@@@@ */
+    .intro-info {
+        transform: scale(.8);
+    }
+    .index-intro {
+        background: url("../img/bg-mobile.jpg") no-repeat center;
+    }
+    /* @@@@@@@@@@ INTRO @@@@@@@@@@ */
+    /* @@@@@@@@@@ PRODUTOS @@@@@@@@@@ */
+    .produtos-tipos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .produto {
+        margin-bottom: 2rem;
+        width: 80%;
+    }
+    .container {
+        width: 80%;
+    }
+    /* @@@@@@@@@@ PRODUTOS @@@@@@@@@@ */
+    /* @@@@@@@@@@ SOBRE @@@@@@@@@@ */
+    .linhas-sobre img {
+        display: none;
+    }
+    .qualidades {
+        flex-direction: column;
+        min-width: auto;
+    }
+    .linha-vertical {
+        width: .3rem;
+        height: 6rem;
+        background-color: #000;
+    }
+    .linha-vertical:nth-child(1) {
+        height: 3rem;
+        margin-top: 2rem;
+    }
+    .qualidade-item {
+        border-width: .4rem;
+        border-style: solid;
+        padding: 2rem;
+        width: 90%;
+    }
+    .sobre .texto-btn {
+        margin-top: 0;
+    }
+    /* @@@@@@@@@@ SOBRE @@@@@@@@@@ */
+    .quebra {
+        background-size: auto;
+    }
+    /* @@@@@@@@@@ RODAPÉ @@@@@@@@@@ */
+    .rodape-item {
+        width: 45%;
+    }
+    .rodape-item:nth-child(1) {
+        display: none;
+    }
+    /* @@@@@@@@@@ RODAPÉ @@@@@@@@@@ */
+    /* ############################################# FINAL DA PÁGINA INDEX.HTML ############################################# */
+    /* ############################################# INICIO DA PÁGINA PRODUTOS.HTML ############################################# */
+    .info-orcamento {
+        flex-direction: column;
+    }
+    /* ############################################# FIM DA PÁGINA PRODUTOS.HTML ############################################# */
+    /* ############################################# INICIO DA PÁGINA PORTFOLIO.HTML ############################################# */
+    .portfolio-texto {
+        width: 80% !important;
+    }
+    /* ############################################# FIM DA PÁGINA PORTFOLIO.HTML ############################################# */
+    /* ############################################# INÍCIO DA PÁGINA SOBRE.HTML ############################################# */
+    .sobre-texto {
+        flex-direction: column;
+    }
+    .sobre-texto-esquerda {
+        width: 100%;
+    }
+    /* ############################################# FIM DA PÁGINA SOBRE.HTML ############################################# */
+    /* ############################################# FIM DA PÁGINA SOBRE.HTML ############################################# */
+    .main-contato .rodape-item {
+        margin: 4rem 0rem 4rem 0rem;
+    }
+    /* ############################################# FIM DA PÁGINA SOBRE.HTML ############################################# */
+}
+
+@media only screen and (max-width: 860px) {
+    .grid-produtos-item:nth-child(1), .grid-produtos:nth-child(2) .grid-produtos-item:nth-child(1), .grid-produtos:nth-child(3) .grid-produtos-item:nth-child(1) {
+        background-size: auto !important;
+    }
+    .sobre-texto {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/*Small screens and laptops (min 769px - max 1024px)*/
+
+@media only screen and (max-width: 1024px) {
+    /* @@@@@@@@@@ PORTFOLIO @@@@@@@@@@ */
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 460px;
+    }
+    .portfolio-grid-item:nth-child(3) img {
+        width: 460px;
+    }
+    /* @@@@@@@@@@ PORTFOLIO @@@@@@@@@@ */
+    /* @@@@@@@@@@ SOBRE @@@@@@@@@@ */
+    .sobre img, .qualidades {
+        transform: scale(.8);
+    }
+    /* @@@@@@@@@@ SOBRE @@@@@@@@@@ */
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIM DA PÁGINA INDEX.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INICIO DA PÁGINA PRODUTOS.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    /* @@@@@@@@@@ PRODUTOS-GRID @@@@@@@@@@ */
+    .grid-produtos {
+        width: 85%;
+    }
+    .grid-produtos-item:nth-child(1), .grid-produtos:nth-child(2) .grid-produtos-item:nth-child(1), .grid-produtos:nth-child(3) .grid-produtos-item:nth-child(1) {
+        height: 280px;
+        background-size: 100%;
+        background-position: right;
+    }
+    .grid-produtos-item:nth-child(2), .grid-produtos-item:nth-child(3) {
+        display: none;
+    }
+    .grid-produtos {
+        display: flex;
+        flex-direction: column;
+    }
+    /* @@@@@@@@@@ PRODUTOS-GRID @@@@@@@@@@ */
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIANL DA PÁGINA PRODUTOS.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INICIO DA PÁGINA PORTFÓLIO.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    .portfolio-texto {
+        width: 60%;
+    }
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIM DA PÁGINA PORTFÓLIO.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ INÍCIO DA PÁGINA SOBRE.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+    .sobre-equipe {
+        display: flex;
+        justify-content: center;
+    }
+    .sobre-equipe img {
+        max-width: 100%;
+        height: auto;
+    }
+    .sobre-texto {
+        display: flex;
+        flex-direction: column;
+    }
+    .sobre-texto-esquerda {
+        width: 100%;
+        margin-bottom: 0rem;
+    }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FIM DA PÁGINA SOBRE.HTML @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+/*Desktops and large screens (1025px - 1200px) */
+
+@media only screen and (max-width: 1025px) {}
+
+/* Extra-large screens and TVs (1201px and more) */
+
+@media only screen and (min-width: 1201px) {
+    .intro {
+        background-size: auto;
+    }
+}
+
+/* Extra-extra-large screens and TVs (1201px and more) */
+
+@media only screen and (min-width: 1400px) {
+    .intro {
+        background-size: 100%;
+    }
+}
+
+/*JQUERY SLIDE*/
+
+.rslides, .rslides_portfolio {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li, .rslides_portfolio li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child, .rslides_portfolio li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img, .rslides_portfolio img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+.rslides2_tabs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.rslides2_tabs li {
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rslides2_tabs li a {
+    background-color: #222222;
+    color: #222222;
+    border-radius: 7px;
+    height: 14px;
+    width: 14px;
+    text-indent: -2000px;
+}
+
+.rslides_tabs li.rslides_here a, .rslides2_tabs li a:hover {
+    background-color: var(--amarelo);
+    color: var(--amarelo);
+}
+
+/* ANIMAÇÕES */
+
+.js .animar_300, .js .animar_600, .js .animar_900, .js .animar_1200, .js .animar_1500 {
+    opacity: 0;
+}
+
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@media (prefers-reduced-motion:reduce), print {
+    .animate__animated {
+        -webkit-animation-duration: 1ms!important;
+        animation-duration: 1ms!important;
+        -webkit-transition-duration: 1ms!important;
+        transition-duration: 1ms!important;
+        -webkit-animation-iteration-count: 1!important;
+        animation-iteration-count: 1!important
+    }
+    .animate__animated[class*=Out] {
+        opacity: 0
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animate__fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown
+>>>>>>> 6bea1931e53a2fb4892a3c9d9ca7e84f20843db5
+}
